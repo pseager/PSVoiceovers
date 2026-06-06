@@ -213,15 +213,6 @@ h6 {
 
 /* Hero */
 .hero {
-  background:
-    var(--hero-background-image),
-    linear-gradient(
-      100deg,
-      var(--color-navy) 50.3%,
-      var(--color-slate) 50.39%,
-      var(--color-slate) 50.89%,
-      var(--color-navy) 51%
-    );
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

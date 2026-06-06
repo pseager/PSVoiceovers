@@ -10,7 +10,9 @@ export default function Hero() {
     <section
       id="home"
       className="hero"
-      style={{ '--hero-background-image': `url(${micBackground})` }}
+      style={{
+        backgroundImage: `url(${micBackground}), linear-gradient(100deg, #164b72 50.3%, #283e53 50.39%, #283e53 50.89%, #164b72 51%)`,
+      }}
     >
       <div className="container hero__inner">
         <div className="hero__content">
