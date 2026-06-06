@@ -12,7 +12,8 @@ module.exports = (env, argv) => {
       filename: isProduction ? 'js/[name].[contenthash:8].js' : 'js/[name].js',
       assetModuleFilename: 'assets/[name].[hash:8][ext]',
       clean: true,
-      publicPath: '/',
+      // Relative paths work on both github.io/PSVoiceovers/ and psvoiceovers.com
+      publicPath: isProduction ? './' : '/',
     },
     resolve: {
       extensions: ['.js', '.jsx'],
