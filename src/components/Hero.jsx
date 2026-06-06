@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import micBackground from '../assets/images/mic-background.jpeg';
 import { audioDemos, siteConfig } from '../data/siteData';
 import AudioPlayer from './AudioPlayer';
 
@@ -6,7 +7,11 @@ export default function Hero() {
   const [activeDemoId, setActiveDemoId] = useState(null);
 
   return (
-    <section id="home" className="hero">
+    <section
+      id="home"
+      className="hero"
+      style={{ '--hero-background-image': `url(${micBackground})` }}
+    >
       <div className="container hero__inner">
         <div className="hero__content">
           <a href="#home" className="hero__logo-link">
