@@ -442,10 +442,6 @@ h6 {
   font-size: 0.95rem;
 }
 
-.footer__powered a:hover {
-  color: var(--color-gold);
-}
-
 /* Tablet */
 @media (max-width: 991px) {
   .header__inner {
