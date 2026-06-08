@@ -15,10 +15,10 @@ export default function Header() {
         <div className="header__brand">
           <SocialLinks variant="gold" />
           <div className="header__title-group">
-            <h2 className="header__title">
+            <p className="header__title">
               <a href="#home">{siteConfig.name}</a>
-            </h2>
-            <h2 className="header__tagline">{siteConfig.tagline}</h2>
+            </p>
+            <p className="header__tagline">{siteConfig.tagline}</p>
           </div>
         </div>
 

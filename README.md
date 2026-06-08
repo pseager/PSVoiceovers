@@ -75,6 +75,21 @@ In GoDaddy DNS for `psvoiceovers.com`, add:
 
 Remove any conflicting forwarding or old A/CNAME records. After DNS propagates, enable **Enforce HTTPS** in GitHub Pages settings.
 
+## SEO and Google Search Console
+
+The site includes optimized meta tags, Open Graph/Twitter cards, JSON-LD structured data, `robots.txt`, and `sitemap.xml`.
+
+### Submit your site to Google
+
+1. Go to [Google Search Console](https://search.google.com/search-console)
+2. Click **Add property** → enter `https://psvoiceovers.com`
+3. Verify ownership (HTML tag or DNS — DNS is easy if you already use GoDaddy)
+4. After verification, open **Sitemaps** in the left menu
+5. Submit: `https://psvoiceovers.com/sitemap.xml`
+6. Over the next few weeks, check **Performance** to see which searches bring visitors
+
+Also link to `https://psvoiceovers.com` from LinkedIn, YouTube, and any voice-over directories you use.
+
 ## Browser Support
 
 Targets browsers used by more than 0.5% of users, plus the last two versions of major browsers and Firefox ESR. JavaScript is transpiled via Babel with `core-js` polyfills injected as needed.

@@ -15,11 +15,15 @@ export default function Hero() {
       }}
     >
       <div className="container hero__inner">
+        <h1 className="sr-only">
+          Paul Seager — Professional Male Voice Over Talent for Commercials,
+          E-Learning, Imaging, and IVR
+        </h1>
         <div className="hero__content">
           <a href="#home" className="hero__logo-link">
             <img
               src={siteConfig.logo}
-              alt="PS Voiceovers logo"
+              alt="PS Voiceovers — Paul Seager professional voice over talent"
               className="hero__logo"
             />
           </a>
@@ -43,7 +47,7 @@ export default function Hero() {
         <div className="hero__headshot-wrap">
           <img
             src={siteConfig.headshot}
-            alt="Paul Seager headshot"
+            alt="Paul Seager, professional male voice over artist and narrator"
             className="hero__headshot"
           />
         </div>
