@@ -1,7 +1,6 @@
 import logo from '../assets/images/logo.png';
 import headshot from '../assets/images/headshot.jpg';
 import commercialDemo from '../assets/audio/commercial-demo.mp3';
-import imaginariumDemo from '../assets/audio/imaginarium-360.mp3';
 import elearningDemo from '../assets/audio/elearning-demo.mp3';
 import imagingDemo from '../assets/audio/imaging-demo.mp3';
 import ivrDemo from '../assets/audio/ivr-telephony.mp3';
@@ -58,11 +57,6 @@ export const audioDemos = [
     id: 'commercial',
     title: 'Commercial Demo',
     src: commercialDemo,
-  },
-  {
-    id: 'imaginarium',
-    title: 'Imaginarium 360',
-    src: imaginariumDemo,
   },
   {
     id: 'elearning',
