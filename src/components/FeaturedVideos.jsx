@@ -2,13 +2,16 @@ import { featuredVideos } from '../data/siteData';
 
 export default function FeaturedVideos() {
   return (
-    <section id="videos" className="featured-videos">
+    <section id="videos" className="videos">
       <div className="container">
-        <h2 className="section-heading">Featured Videos</h2>
-        <div className="featured-videos__grid">
+        <div className="section-header">
+          <span className="section-header__eyebrow">Showreel</span>
+          <h2 className="section-header__title">Featured Videos</h2>
+        </div>
+        <div className="videos__grid">
           {featuredVideos.map((video) => (
-            <div key={video.id} className="featured-videos__item">
-              <div className="featured-videos__frame">
+            <article key={video.id} className="videos__item">
+              <div className="videos__frame">
                 <iframe
                   src={`https://www.youtube.com/embed/${video.youtubeId}`}
                   title={video.title}
@@ -17,7 +20,7 @@ export default function FeaturedVideos() {
                   loading="lazy"
                 />
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>

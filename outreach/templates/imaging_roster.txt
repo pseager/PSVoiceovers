@@ -1,0 +1,26 @@
+Subject: Available for Commercial & Imaging VO — {{sender_name}}
+
+Hi{{contact_greeting}},
+
+I'm {{sender_name}}, a non-union voice talent with a professional home studio and Source-Connect. I'm writing because {{company}} works in commercial and promo/imaging — exactly the space where I do my best work.
+
+I deliver broadcast-ready audio for:
+- Radio/TV commercials
+- Station imaging, promos, sweepers, and liners
+- Brand voice and narration
+
+Listen here: {{demo_url}}
+Studio: Sennheiser MKH 416, Focusrite Scarlett 4i4, Reaper, iZotope RX 11
+
+I'm Utah-based, record remotely, and can turn around auditions and sessions quickly. If you're adding voices to your roster or talent pool, I'd love to be considered.
+
+Thanks for reading,
+
+{{sender_name}}
+{{sender_email}} | {{sender_phone}}
+{{website}} | Source-Connect: {{source_connect}}
+
+---
+Reply "unsubscribe" to opt out of future emails.
+
+{{physical_address}}

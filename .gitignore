@@ -3,3 +3,8 @@ dist
 .DS_Store
 *.log
 .vite
+
+# Outreach tooling (local config and send history)
+outreach/config.json
+outreach/sent_log.csv
+outreach/drafts/

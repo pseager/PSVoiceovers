@@ -81,39 +81,20 @@ export default function AudioPlayer({ demo, isActive, onPlay }) {
   const progress = duration ? (currentTime / duration) * 100 : 0;
 
   return (
-    <div className={`audio-player ${isActive ? 'audio-player--active' : ''}`}>
+    <article className={`demo-card ${isActive ? 'demo-card--active' : ''}`}>
       <audio ref={audioRef} preload="none" src={demo.src} />
-      <div className="audio-player__controls">
+      <div className="demo-card__top">
         <button
           type="button"
-          className="audio-player__play"
+          className="demo-card__play"
           onClick={togglePlayback}
           aria-label={isPlaying ? `Pause ${demo.title}` : `Play ${demo.title}`}
         >
           <i className={`fa-solid ${isPlaying ? 'fa-pause' : 'fa-play'}`} aria-hidden="true" />
         </button>
-
-        <div className="audio-player__track">
-          <span className="audio-player__title">{demo.title}</span>
-          <button
-            type="button"
-            className="audio-player__progress"
-            onClick={handleSeek}
-            aria-label={`Seek ${demo.title}`}
-          >
-            <span className="audio-player__progress-rail" />
-            <span
-              className="audio-player__progress-fill"
-              style={{ width: `${progress}%` }}
-            />
-          </button>
-          <span className="audio-player__time">
-            {formatTime(currentTime)} / {formatTime(duration)}
-          </span>
-        </div>
-
+        <h3 className="demo-card__title">{demo.title}</h3>
         <a
-          className="audio-player__download"
+          className="demo-card__download"
           href={demo.src}
           download
           aria-label={`Download ${demo.title}`}
@@ -121,6 +102,18 @@ export default function AudioPlayer({ demo, isActive, onPlay }) {
           <i className="fa-solid fa-cloud-arrow-down" aria-hidden="true" />
         </a>
       </div>
-    </div>
+      <button
+        type="button"
+        className="demo-card__progress"
+        onClick={handleSeek}
+        aria-label={`Seek ${demo.title}`}
+      >
+        <span className="demo-card__progress-rail" />
+        <span className="demo-card__progress-fill" style={{ width: `${progress}%` }} />
+      </button>
+      <span className="demo-card__time">
+        {formatTime(currentTime)} / {formatTime(duration)}
+      </span>
+    </article>
   );
 }

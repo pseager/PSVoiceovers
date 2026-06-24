@@ -1,0 +1,24 @@
+{
+  "sender": {
+    "name": "Paul Seager",
+    "email": "paul@psvoiceovers.com",
+    "phone": "801-683-7175",
+    "website": "https://psvoiceovers.com",
+    "demo_url": "https://psvoiceovers.com/#demos",
+    "linkedin": "https://www.linkedin.com/in/paul-seager-08002814/",
+    "source_connect": "https://source-elements.com/find/pseager",
+    "location": "Utah (remote/home studio)",
+    "union_status": "Non-union",
+    "physical_address": "YOUR MAILING ADDRESS (required for CAN-SPAM compliance)"
+  },
+  "outreach": {
+    "batch_size": 10,
+    "delay_seconds": 45,
+    "default_from_name": "Paul Seager"
+  },
+  "smtp": {
+    "host": "smtp.gmail.com",
+    "port": 587,
+    "use_tls": true
+  }
+}

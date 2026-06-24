@@ -1,0 +1,25 @@
+Subject: Non-Union VO Submission — Commercial & Promo/Imaging — {{sender_name}}
+
+Hi{{contact_greeting}},
+
+I'm {{sender_name}}, a non-union voice talent based in Utah with a broadcast-ready home studio (Sennheiser MKH 416, iZotope RX 11, Source-Connect). I'm reaching out because {{company}} represents the kind of commercial and promo/imaging work I'm focused on.
+
+I specialize in clear, engaging reads for commercials, radio/TV promo, and imaging. Demos and studio details are here: {{demo_url}}
+
+A few quick notes:
+- Non-union; available for remote sessions nationwide
+- Source-Connect, Zoom, Teams, and other directed-session platforms
+- Fast turnaround and easy to work with
+
+If you're open to reviewing new talent for your roster, I'd welcome the chance to be considered. Happy to send MP3 demos directly if you prefer attachments over the website link.
+
+Thank you for your time,
+
+{{sender_name}}
+{{sender_email}} | {{sender_phone}}
+{{website}}
+
+---
+To stop receiving emails from me, reply with "unsubscribe" and I will remove you from future outreach.
+
+{{physical_address}}

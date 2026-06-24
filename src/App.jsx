@@ -1,5 +1,6 @@
 import About from './components/About';
 import Contact from './components/Contact';
+import Demos from './components/Demos';
 import FeaturedVideos from './components/FeaturedVideos';
 import Footer from './components/Footer';
 import Header from './components/Header';
@@ -13,11 +14,9 @@ export default function App() {
       <Header />
       <main>
         <Hero />
-        <div className="divider" />
+        <Demos />
         <FeaturedVideos />
-        <div className="divider" />
         <About />
-        <div className="divider" />
         <Contact />
       </main>
       <Footer />

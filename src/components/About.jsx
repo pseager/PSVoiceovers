@@ -1,20 +1,22 @@
 import { aboutContent } from '../data/siteData';
 
-function AboutBlock({ title, items, paragraphs }) {
+function AboutCard({ title, items, paragraphs }) {
   return (
-    <div className="about__block">
-      <h3>{title}</h3>
+    <article className="about-card">
+      <h3 className="about-card__title">{title}</h3>
       {items && (
-        <ul>
+        <ul className="about-card__list">
           {items.map((item) => (
             <li key={item}>{item}</li>
           ))}
         </ul>
       )}
       {paragraphs?.map((paragraph) => (
-        <p key={paragraph}>{paragraph}</p>
+        <p key={paragraph} className="about-card__text">
+          {paragraph}
+        </p>
       ))}
-    </div>
+    </article>
   );
 }
 
@@ -22,12 +24,15 @@ export default function About() {
   return (
     <section id="about" className="about">
       <div className="container">
-        <h2 className="section-heading">About</h2>
-        <div className="about__content">
-          <AboutBlock title="About Me" items={aboutContent.aboutMe} />
-          <AboutBlock title="The Studio" items={aboutContent.studio} />
-          <AboutBlock title="Directed Sessions" items={aboutContent.directedSessions} />
-          <AboutBlock title="Why Me?" paragraphs={aboutContent.whyMe} />
+        <div className="section-header section-header--center">
+          <span className="section-header__eyebrow">About</span>
+          <h2 className="section-header__title">The Voice &amp; The Studio</h2>
+        </div>
+        <div className="about__grid">
+          <AboutCard title="About Me" items={aboutContent.aboutMe} />
+          <AboutCard title="The Studio" items={aboutContent.studio} />
+          <AboutCard title="Directed Sessions" items={aboutContent.directedSessions} />
+          <AboutCard title="Why Me?" paragraphs={aboutContent.whyMe} />
         </div>
       </div>
     </section>

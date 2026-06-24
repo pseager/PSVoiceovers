@@ -10,47 +10,47 @@ export default function Header() {
   };
 
   return (
-    <header className="header">
-      <div className="container header__inner">
-        <div className="header__brand">
-          <SocialLinks variant="gold" />
-          <div className="header__title-group">
-            <p className="header__title">
-              <a href="#home">{siteConfig.name}</a>
-            </p>
-            <p className="header__tagline">{siteConfig.tagline}</p>
-          </div>
-        </div>
+    <header className="site-header">
+      <div className="container site-header__bar">
+        <a href="#home" className="site-header__brand">
+          <img
+            src={siteConfig.logo}
+            alt=""
+            className="site-header__logo"
+            aria-hidden="true"
+          />
+          <span className="site-header__name">{siteConfig.name}</span>
+        </a>
 
         <button
           type="button"
-          className="header__menu-toggle"
+          className="site-header__toggle"
           aria-expanded={menuOpen}
           aria-controls="site-navigation"
           onClick={() => setMenuOpen((open) => !open)}
         >
-          Menu
+          <span className="site-header__toggle-icon" aria-hidden="true" />
+          <span className="sr-only">Menu</span>
         </button>
 
-        <nav
-          id="site-navigation"
-          className={`header__nav ${menuOpen ? 'header__nav--open' : ''}`}
-          aria-label="Main navigation"
-        >
-          <ul className="header__nav-list">
-            {navLinks.map((link) => (
-              <li key={link.id}>
-                <a href={link.href} onClick={handleNavClick}>
-                  {link.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <div className={`site-header__panel ${menuOpen ? 'site-header__panel--open' : ''}`}>
+          <nav id="site-navigation" className="site-header__nav" aria-label="Main navigation">
+            <ul className="site-header__nav-list">
+              {navLinks.map((link) => (
+                <li key={link.id}>
+                  <a href={link.href} onClick={handleNavClick}>
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
 
-        <div className="header__contact">
-          <a href={siteConfig.phoneHref}>{siteConfig.phone}</a>
-          <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
+          <div className="site-header__meta">
+            <a href={siteConfig.phoneHref}>{siteConfig.phone}</a>
+            <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
+            <SocialLinks variant="gold" />
+          </div>
         </div>
       </div>
     </header>

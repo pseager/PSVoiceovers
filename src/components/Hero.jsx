@@ -1,56 +1,45 @@
-import { useState } from 'react';
 import micBackground from '../assets/images/mic-background.jpeg';
-import { audioDemos, siteConfig } from '../data/siteData';
-import AudioPlayer from './AudioPlayer';
+import { siteConfig } from '../data/siteData';
 
 export default function Hero() {
-  const [activeDemoId, setActiveDemoId] = useState(null);
-
   return (
     <section
       id="home"
-      className="hero"
+      className="intro"
       style={{
-        backgroundImage: `url(${micBackground}), linear-gradient(100deg, #164b72 50.3%, #283e53 50.39%, #283e53 50.89%, #164b72 51%)`,
+        backgroundImage: `url(${micBackground})`,
       }}
     >
-      <div className="container hero__inner">
-        <h1 className="sr-only">
-          Paul Seager — Professional Male Voice Over Talent for Commercials,
-          E-Learning, Imaging, and IVR
-        </h1>
-        <div className="hero__content">
-          <a href="#home" className="hero__logo-link">
-            <img
-              src={siteConfig.logo}
-              alt="PS Voiceovers — Paul Seager professional voice over talent"
-              className="hero__logo"
-            />
-          </a>
-
-          <div id="demos" className="hero__demos">
-            {audioDemos.map((demo) => (
-              <AudioPlayer
-                key={demo.id}
-                demo={demo}
-                isActive={activeDemoId === demo.id}
-                onPlay={setActiveDemoId}
-              />
-            ))}
+      <div className="intro__scrim" aria-hidden="true" />
+      <div className="container intro__grid">
+        <div className="intro__copy">
+          <img
+            src={siteConfig.logo}
+            alt=""
+            className="intro__logo"
+            aria-hidden="true"
+          />
+          <h1 className="intro__title">{siteConfig.name}</h1>
+          <p className="intro__tagline">{siteConfig.tagline}</p>
+          <p className="intro__lead">
+            Professional male voice over for commercials, e-learning, imaging,
+            IVR, and narration. Broadcast-ready studio. Fast turnaround.
+          </p>
+          <div className="intro__actions">
+            <a href="#demos" className="btn btn--primary">
+              Hear My Demos
+            </a>
+            <a href="#contact" className="btn btn--outline">
+              Let&apos;s Work Together
+            </a>
           </div>
-
-          <a href="#contact" className="hero__cta button-bg">
-            Let&apos;s Work Together - Contact Me
-          </a>
         </div>
-
-        <div className="hero__headshot-wrap">
+        <figure className="intro__portrait">
           <img
             src={siteConfig.headshot}
             alt="Paul Seager, professional male voice over artist and narrator"
-            className="hero__headshot"
           />
-        </div>
+        </figure>
       </div>
     </section>
   );
