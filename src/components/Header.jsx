@@ -13,12 +13,6 @@ export default function Header() {
     <header className="site-header">
       <div className="container site-header__bar">
         <a href="#home" className="site-header__brand">
-          <img
-            src={siteConfig.logo}
-            alt=""
-            className="site-header__logo"
-            aria-hidden="true"
-          />
           <span className="site-header__name">{siteConfig.name}</span>
         </a>
 

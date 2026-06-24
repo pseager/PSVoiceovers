@@ -209,12 +209,6 @@ h6 {
   min-width: 0;
 }
 
-.site-header__logo {
-  width: 2.75rem;
-  height: 2.75rem;
-  object-fit: contain;
-}
-
 .site-header__name {
   font-size: 1.05rem;
   font-weight: 700;
@@ -358,7 +352,9 @@ h6 {
 }
 
 .intro__portrait {
-  margin: 0;
+  width: 67%;
+  max-width: 300px;
+  margin-inline: auto;
   padding: 0.35rem;
   border: 2px solid rgba(231, 193, 111, 0.55);
   border-radius: var(--radius-lg);
@@ -608,6 +604,16 @@ h6 {
   word-break: break-word;
 }
 
+.contact__action--email .contact__action-value {
+  text-decoration: underline;
+  text-decoration-color: rgba(231, 193, 111, 0.45);
+  text-underline-offset: 0.2em;
+}
+
+.contact__action--email:hover .contact__action-value {
+  text-decoration-color: var(--color-gold);
+}
+
 .contact__card .social-links {
   justify-content: center;
 }
@@ -673,7 +679,7 @@ h6 {
   }
 
   .intro__portrait {
-    max-width: 420px;
+    max-width: 280px;
     margin-inline: auto;
   }
 
