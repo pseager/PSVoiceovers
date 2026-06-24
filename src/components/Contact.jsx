@@ -1,5 +1,6 @@
 import { siteConfig } from '../data/siteData';
 import SocialLinks from './SocialLinks';
+import { mailtoLinkProps } from '../utils/externalLink';
 
 export default function Contact() {
   return (
@@ -17,6 +18,7 @@ export default function Contact() {
             <a
               href={siteConfig.emailHref}
               className="contact__action contact__action--email"
+              {...mailtoLinkProps(siteConfig.emailHref)}
             >
               <span className="contact__action-label">Email</span>
               <span className="contact__action-value">{siteConfig.email}</span>

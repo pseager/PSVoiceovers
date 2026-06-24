@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { navLinks, siteConfig } from '../data/siteData';
 import SocialLinks from './SocialLinks';
+import { mailtoLinkProps } from '../utils/externalLink';
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -42,7 +43,9 @@ export default function Header() {
 
           <div className="site-header__meta">
             <a href={siteConfig.phoneHref}>{siteConfig.phone}</a>
-            <a href={siteConfig.emailHref}>{siteConfig.email}</a>
+            <a href={siteConfig.emailHref} {...mailtoLinkProps(siteConfig.emailHref)}>
+              {siteConfig.email}
+            </a>
             <SocialLinks variant="gold" />
           </div>
         </div>
