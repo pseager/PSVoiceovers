@@ -1,28 +1,40 @@
 #!/usr/bin/env python3
-"""Generate favicons with a light blue background for gold logo contrast."""
+"""Generate high-contrast favicons: white thickened logo on navy background."""
 
 from pathlib import Path
 
 try:
-    from PIL import Image, ImageDraw
+    from PIL import Image, ImageDraw, ImageFilter
 except ImportError:
     raise SystemExit('Install Pillow: pip3 install pillow')
 
 ROOT = Path(__file__).resolve().parents[1]
 LOGO_PATH = ROOT / 'src/assets/images/logo.png'
 PUBLIC = ROOT / 'public'
-# Lighter site blue so gold logo reads clearly on tabs
-BG = (74, 131, 150, 255)  # #4a8396
+BG = (22, 75, 114, 255)  # #164b72
+
+
+def white_logo(source_size: int, thicken: int) -> Image.Image:
+    logo = Image.open(LOGO_PATH).convert('RGBA')
+    ratio = source_size / max(logo.width, logo.height)
+    logo = logo.resize(
+        (max(1, int(logo.width * ratio)), max(1, int(logo.height * ratio))),
+        Image.Resampling.LANCZOS,
+    )
+    alpha = logo.split()[3]
+    if thicken > 1:
+        alpha = alpha.filter(ImageFilter.MaxFilter(thicken))
+    white = Image.new('RGBA', logo.size, (255, 255, 255, 0))
+    white.putalpha(alpha)
+    return white
 
 
 def make_icon(size: int, out_name: str, corner_radius: int) -> None:
     bg = Image.new('RGBA', (size, size), BG)
-    logo = Image.open(LOGO_PATH).convert('RGBA')
-    pad = int(size * 0.14)
+    thicken = 7 if size <= 32 else 5
+    pad = int(size * 0.16)
     target = size - pad * 2
-    ratio = min(target / logo.width, target / logo.height)
-    new_size = (max(1, int(logo.width * ratio)), max(1, int(logo.height * ratio)))
-    logo = logo.resize(new_size, Image.Resampling.LANCZOS)
+    logo = white_logo(target, thicken)
     x = (size - logo.width) // 2
     y = (size - logo.height) // 2
     bg.alpha_composite(logo, (x, y))

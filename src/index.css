@@ -249,6 +249,10 @@ h6 {
   font-size: 0.85rem;
 }
 
+.site-header__meta a:not(.social-links__item) {
+  cursor: pointer;
+}
+
 .site-header__meta a:not(.social-links__item):hover {
   color: var(--color-gold);
 }
@@ -584,7 +588,12 @@ h6 {
   border: 1px solid rgba(231, 193, 111, 0.25);
   border-radius: var(--radius-md);
   background: rgba(231, 193, 111, 0.06);
+  cursor: pointer;
   transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.contact__action * {
+  pointer-events: none;
 }
 
 .contact__action:hover {

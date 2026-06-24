@@ -15,13 +15,13 @@ export default function Contact() {
           </div>
           <div className="contact__actions">
             <a
-              href={`mailto:${siteConfig.email}?subject=${encodeURIComponent('Voice Over Inquiry')}`}
+              href={siteConfig.emailHref}
               className="contact__action contact__action--email"
             >
               <span className="contact__action-label">Email</span>
               <span className="contact__action-value">{siteConfig.email}</span>
             </a>
-            <a href={siteConfig.phoneHref} className="contact__action">
+            <a href={siteConfig.phoneHref} className="contact__action contact__action--phone">
               <span className="contact__action-label">Phone</span>
               <span className="contact__action-value">{siteConfig.phone}</span>
             </a>

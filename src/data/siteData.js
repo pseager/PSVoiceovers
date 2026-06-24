@@ -13,6 +13,8 @@ export const siteConfig = {
   phone: '801-683-7175',
   phoneHref: 'tel:+18016837175',
   email: 'paul@psvoiceovers.com',
+  emailHref:
+    'mailto:paul@psvoiceovers.com?subject=Voice%20Over%20Inquiry',
   copyright: '©2026 psvoiceovers.com',
   logo,
   headshot,
