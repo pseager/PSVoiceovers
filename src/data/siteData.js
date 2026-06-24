@@ -86,11 +86,8 @@ export const audioDemos = [
 ];
 
 export const featuredVideos = [
-  { id: 'video-1', youtubeId: 'p6KXPH0zQKE', title: 'Featured video 1' },
-  { id: 'video-2', youtubeId: 'D3qGx8pPGoE', title: 'Featured video 2' },
-  { id: 'video-3', youtubeId: 'kTIEYZC3N_w', title: 'Featured video 3' },
-  { id: 'video-4', youtubeId: 'fYKxJuXw_7c', title: 'Featured video 4' },
-  { id: 'video-5', youtubeId: '2RRVs3-isa8', title: 'Featured video 5' },
+  { id: 'video-1', youtubeId: 'p6KXPH0zQKE', title: 'Commercial Demo Paul Seager' },
+  { id: 'video-2', youtubeId: '2RRVs3-isa8', title: 'Narration Demo Paul Seager' },
 ];
 
 export const aboutContent = {
