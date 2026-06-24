@@ -1,4 +1,5 @@
 import { socialLinks } from '../data/siteData';
+import { externalLinkProps } from '../utils/externalLink';
 import SourceConnectIcon from './SourceConnectIcon';
 
 export default function SocialLinks({ variant = 'gold' }) {
@@ -9,8 +10,7 @@ export default function SocialLinks({ variant = 'gold' }) {
           key={link.id}
           href={link.href}
           className="social-links__item"
-          target="_blank"
-          rel="noopener noreferrer"
+          {...externalLinkProps(link.href)}
           aria-label={link.label}
           title={link.label}
         >
