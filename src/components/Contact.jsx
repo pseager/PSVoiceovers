@@ -1,5 +1,6 @@
 import { siteConfig } from '../data/siteData';
 import SocialLinks from './SocialLinks';
+import { openEmailClient } from '../utils/openEmail';
 
 export default function Contact() {
   return (
@@ -17,6 +18,9 @@ export default function Contact() {
             <a
               href={siteConfig.emailHref}
               className="contact__action contact__action--email"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(event) => openEmailClient(event, siteConfig.emailHref)}
             >
               <span className="contact__action-label">Email</span>
               <span className="contact__action-value">{siteConfig.email}</span>

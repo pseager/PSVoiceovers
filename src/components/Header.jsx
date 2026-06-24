@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { navLinks, siteConfig } from '../data/siteData';
+import { openEmailClient } from '../utils/openEmail';
 import SocialLinks from './SocialLinks';
 
 export default function Header() {
@@ -41,8 +42,17 @@ export default function Header() {
           </nav>
 
           <div className="site-header__meta">
-            <a href={siteConfig.phoneHref}>{siteConfig.phone}</a>
-            <a href={siteConfig.emailHref}>{siteConfig.email}</a>
+            <a href={siteConfig.phoneHref} target="_blank" rel="noopener noreferrer">
+              {siteConfig.phone}
+            </a>
+            <a
+              href={siteConfig.emailHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(event) => openEmailClient(event, siteConfig.emailHref)}
+            >
+              {siteConfig.email}
+            </a>
             <SocialLinks variant="gold" />
           </div>
         </div>
