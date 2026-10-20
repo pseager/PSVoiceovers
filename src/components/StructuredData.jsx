@@ -33,6 +33,7 @@ export default function StructuredData() {
         areaServed: seo.location.areaServed,
         address: {
           '@type': 'PostalAddress',
+          addressLocality: 'South Jordan',
           addressRegion: seo.location.region,
           addressCountry: seo.location.country,
         },
