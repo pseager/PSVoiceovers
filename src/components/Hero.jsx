@@ -22,8 +22,10 @@ export default function Hero() {
           <h1 className="intro__title">{siteConfig.name}</h1>
           <p className="intro__tagline">{siteConfig.tagline}</p>
           <p className="intro__lead">
-            Professional voice actor for commercials, e-learning, imaging, IVR,
-            and narration. Broadcast-ready studio. Fast turnaround.
+            Professional voice actor for commercials, imaging, promo, corporate
+            narration, e-learning, and IVR. Broadcast-ready studio in South
+            Jordan, Utah — most projects delivered within 24 hours, and
+            available worldwide via Source-Connect.
           </p>
           <div className="intro__actions">
             <a href="#demos" className="btn btn--primary">
