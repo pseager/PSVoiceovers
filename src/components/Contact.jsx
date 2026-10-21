@@ -11,7 +11,9 @@ export default function Contact() {
             <span className="section-header__eyebrow">Get in Touch</span>
             <h2 className="section-header__title">Contact Paul</h2>
             <p className="section-header__lead">
-              Ready to record? Reach out by email or phone.
+              Ready to record? Reach out by email or phone. I&apos;m based in
+              South Jordan, Utah and record in my own broadcast-ready studio —
+              most projects are delivered within 24 hours.
             </p>
           </div>
           <div className="contact__actions">
