@@ -1,5 +1,6 @@
 import About from './components/About';
 import Contact from './components/Contact';
+import Faq from './components/Faq';
 import Demos from './components/Demos';
 import FeaturedVideos from './components/FeaturedVideos';
 import Footer from './components/Footer';
@@ -17,6 +18,7 @@ export default function App() {
         <Demos />
         <FeaturedVideos />
         <About />
+        <Faq />
         <Contact />
       </main>
       <Footer />

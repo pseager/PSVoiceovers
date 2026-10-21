@@ -92,6 +92,39 @@ export const featuredVideos = [
   { id: 'video-2', youtubeId: '2RRVs3-isa8', title: 'Narration Demo Paul Seager' },
 ];
 
+export const faqs = [
+  {
+    id: 'services',
+    question: 'What types of voice over work do you do?',
+    answer:
+      'Commercials, radio imaging, promo, and corporate narration are my specialties. I also record e-learning, IVR and telephony prompts, and character voices — listen to the demos on this page to hear the range.',
+  },
+  {
+    id: 'turnaround',
+    question: 'How quickly will I receive my finished audio?',
+    answer:
+      'Most projects are delivered within 24 hours. Files come edited and mastered, ready to drop straight into your production.',
+  },
+  {
+    id: 'directed-sessions',
+    question: 'Can I direct the session live?',
+    answer:
+      'Yes. I record in my own broadcast-ready studio and offer directed sessions over Source-Connect, Zoom, Google Meet, Webex, or Microsoft Teams.',
+  },
+  {
+    id: 'location',
+    question: 'Where are you located — and do you work with clients outside Utah?',
+    answer:
+      "I'm based in South Jordan, Utah, and I work with clients everywhere. Sessions and delivery happen online, so location is never a barrier.",
+  },
+  {
+    id: 'getting-started',
+    question: 'What do you need from me to get started?',
+    answer:
+      "Send your script, any direction or reference clips, and where the finished audio will be used. I'll confirm pricing and timing before we record — email paul@psvoiceovers.com.",
+  },
+];
+
 export const aboutContent = {
   aboutMe: [
     'Based in South Jordan, Utah',

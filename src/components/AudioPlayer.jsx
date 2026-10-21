@@ -82,7 +82,7 @@ export default function AudioPlayer({ demo, isActive, onPlay }) {
 
   return (
     <article className={`demo-card ${isActive ? 'demo-card--active' : ''}`}>
-      <audio ref={audioRef} preload="none" src={demo.src} />
+      <audio ref={audioRef} preload="metadata" src={demo.src} />
       <div className="demo-card__top">
         <button
           type="button"
