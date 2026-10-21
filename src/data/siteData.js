@@ -96,7 +96,7 @@ export const aboutContent = {
   aboutMe: [
     'Based in South Jordan, Utah',
     '3+ decades in technology, audio, and radio',
-    'Co-host & producer, How To Love Being Married podcast — 24 episodes (2020)',
+    'Co-host & producer, How To Love Being Married podcast',
     'Broadcast-ready home studio',
     'Directed sessions via Source-Connect',
     'Most projects delivered within 24 hours',
@@ -122,6 +122,6 @@ export const aboutContent = {
   ],
   whyMe: [
     'As the voice behind PS Voiceovers LLC, I bring more than three decades in technology, audio, and radio to every session. That background means clean, broadcast-ready audio, a versatile range across commercials, imaging, promo, and narration — and a producer\u2019s ear for what a script needs.',
-    "I also co-hosted and produced How To Love Being Married, a 24-episode podcast, so I know both sides of the microphone. My impeccable work ethic sets me apart — I'm committed, timely, and easy to work with, making the process both fun and professional. Let's collaborate to bring your vision to life. Contact me today and let's create something amazing together!",
+    "I also co-hosted and produced the How To Love Being Married podcast, so I know both sides of the microphone. My impeccable work ethic sets me apart — I'm committed, timely, and easy to work with, making the process both fun and professional. Let's collaborate to bring your vision to life. Contact me today and let's create something amazing together!",
   ],
 };
