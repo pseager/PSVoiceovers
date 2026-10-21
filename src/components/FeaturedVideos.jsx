@@ -13,7 +13,7 @@ export default function FeaturedVideos() {
             <article key={video.id} className="videos__item">
               <div className="videos__frame">
                 <iframe
-                  src={`https://www.youtube.com/embed/${video.youtubeId}`}
+                  src={`https://www.youtube.com/embed/${video.youtubeId}?rel=0&playsinline=1`}
                   title={video.title}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
