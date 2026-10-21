@@ -555,6 +555,39 @@ h6 {
   margin-bottom: 0;
 }
 
+/* FAQ */
+.faq {
+  padding: 4.5rem 0;
+  background: linear-gradient(180deg, #6a828a 0%, var(--color-slate) 100%);
+}
+
+.faq__list {
+  display: grid;
+  gap: 1rem;
+  max-width: 860px;
+  margin-inline: auto;
+}
+
+.faq__item {
+  padding: 1.25rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 3px solid var(--color-gold);
+  border-radius: var(--radius-md);
+  background: rgba(22, 23, 23, 0.28);
+}
+
+.faq__question {
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.faq__answer {
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.9);
+}
+
 /* Contact */
 .contact {
   padding: 4.5rem 0 5rem;

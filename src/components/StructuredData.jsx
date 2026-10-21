@@ -1,10 +1,13 @@
 import { seo, siteUrl } from '../data/seoData';
-import { siteConfig, socialLinks } from '../data/siteData';
+import { faqs, siteConfig, socialLinks } from '../data/siteData';
 
 export default function StructuredData() {
-  const sameAs = socialLinks
-    .filter((link) => link.type !== 'source-connect')
-    .map((link) => link.href);
+  const sameAs = [
+    ...socialLinks
+      .filter((link) => link.type !== 'source-connect')
+      .map((link) => link.href),
+    ...seo.profiles,
+  ];
 
   const structuredData = {
     '@context': 'https://schema.org',
@@ -33,13 +36,35 @@ export default function StructuredData() {
         areaServed: seo.location.areaServed,
         address: {
           '@type': 'PostalAddress',
-          addressLocality: 'South Jordan',
+          addressLocality: seo.location.city,
           addressRegion: seo.location.region,
           addressCountry: seo.location.country,
+        },
+        geo: {
+          '@type': 'GeoCoordinates',
+          latitude: seo.location.geo.latitude,
+          longitude: seo.location.geo.longitude,
         },
         founder: { '@id': `${siteUrl}/#person` },
         serviceType: seo.services,
         priceRange: '$$',
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: 'Voice Over Services',
+          itemListElement: seo.services.map((service) => ({
+            '@type': 'Offer',
+            itemOffered: { '@type': 'Service', name: service },
+          })),
+        },
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': `${siteUrl}/#faq`,
+        mainEntity: faqs.map((faq) => ({
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+        })),
       },
       {
         '@type': 'WebSite',
