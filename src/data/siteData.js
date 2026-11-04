@@ -88,6 +88,12 @@ export const audioDemos = [
 ];
 
 export const featuredVideos = [
+  {
+    id: 'video-ford-spec',
+    src: 'videos/ford-f150-spec-demo.mp4',
+    title: '2026 Ford F-150 Spec Demo',
+    label: 'Spec Demo — created as a demonstration, not a client project',
+  },
   { id: 'video-1', youtubeId: 'p6KXPH0zQKE', title: 'Commercial Demo Paul Seager' },
   { id: 'video-2', youtubeId: '2RRVs3-isa8', title: 'Narration Demo Paul Seager' },
 ];
