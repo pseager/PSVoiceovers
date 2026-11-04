@@ -90,7 +90,7 @@ export const audioDemos = [
 export const featuredVideos = [
   {
     id: 'video-ford-spec',
-    src: 'videos/ford-f150-spec-demo.mp4',
+    youtubeId: 'ppa5ZvlbGTE',
     title: '2026 Ford F-150 Spec Demo',
     label: 'Spec Demo — created as a demonstration, not a client project',
   },
